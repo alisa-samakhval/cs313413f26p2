@@ -19,8 +19,8 @@ public class TestList {
 
   @BeforeEach
   public void setUp() throws Exception {
-    list = new ArrayList<Integer>();
-    // TODO Question: Also try with a LinkedList - does it make any difference?
+    //list = new ArrayList<Integer>();
+    list = new LinkedList<Integer>();
   }
 
   @AfterEach
@@ -44,8 +44,8 @@ public class TestList {
     // TODO fix the expected values in the assertions below
     list.add(77);
     assertEquals(true, list.isEmpty());
-    assertEquals(0, list.size());
-    assertEquals(0, list.get(0).intValue());
+    assertEquals(1, list.size());
+    assertEquals(77, list.get(0).intValue());
   }
 
   @Test
